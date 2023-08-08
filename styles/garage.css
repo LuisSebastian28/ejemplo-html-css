@@ -1,0 +1,75 @@
+header {
+    height: 100vh;
+    min-height: 30em;
+    background:
+            url(../img/banner-garage.jpg)
+            no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-body{
+    justify-content: center;
+    display: flex;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.car-list {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.car-list div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.car-list::-webkit-scrollbar {
+    display: none;
+}
+
+.garage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    padding: 1rem;
+}
+
+#prev-btn, #next-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.car-list div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.car-list div img {
+    width: 100%;
+    filter: grayscale(75%);
+    transition: transform 0.5s;
+}
+
+#prev-btn {
+    transform: rotate(180deg);
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background-color: rgba(255,255,255,.5);
+    border-radius: 50%;
+}
